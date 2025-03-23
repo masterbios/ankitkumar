@@ -51,7 +51,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Global styles={globalStyles} />
-      <Router>
+      <Router basename="/ankitkumar">
         <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
           <Navbar />
           <main style={{ flex: 1, marginTop: '64px' }}>
