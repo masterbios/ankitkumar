@@ -75,7 +75,7 @@ const Home = () => {
           </TextContent>
           <ImageContainer>
             <motion.img
-              src="/profile.jpg"
+              src="/ankitkumar/profile.jpg"
               alt="Ankit Kumar"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
