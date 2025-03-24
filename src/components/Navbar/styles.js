@@ -1,8 +1,7 @@
-import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
-
-const Nav = styled.nav`
+import { Link } from 'react-router-dom';
+export const Nav = styled.nav`
   padding: 1rem 2rem;
   background-color: ${props => props.theme.colors.background};
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -12,7 +11,7 @@ const Nav = styled.nav`
   z-index: 1000;
 `;
 
-const NavContainer = styled.div`
+export const NavContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -20,7 +19,7 @@ const NavContainer = styled.div`
   align-items: center;
 `;
 
-const Logo = styled(Link)`
+export const Logo = styled(Link)`
   font-size: 1.8rem;
   font-weight: 700;
   color: ${props => props.theme.colors.text};
@@ -44,7 +43,7 @@ const Logo = styled(Link)`
 
   &:hover {
     color: ${props => props.theme.colors.secondary};
-    
+
     &::after {
       transform: scaleX(1);
       transform-origin: left;
@@ -56,17 +55,17 @@ const Logo = styled(Link)`
   }
 `;
 
-const NavLinks = styled.div`
+export const NavLinks = styled.div`
   display: flex;
   gap: 2rem;
 `;
 
-const NavLink = styled(motion(Link))`
+export const NavLink = styled(motion(Link))`
   color: ${props => props.theme.colors.text};
   text-decoration: none;
   font-weight: 500;
   position: relative;
-  
+
   &:after {
     content: '';
     position: absolute;
@@ -77,43 +76,8 @@ const NavLink = styled(motion(Link))`
     background-color: ${props => props.theme.colors.secondary};
     transition: width 0.3s ease;
   }
-  
+
   &:hover:after {
     width: 100%;
   }
 `;
-
-const Navbar = () => {
-  return (
-    <Nav>
-      <NavContainer>
-        <Logo to="/">Ankit Kumar</Logo>
-        <NavLinks>
-          <NavLink
-            to="/"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="/projects"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Projects
-          </NavLink>
-          <NavLink
-            to="/contact"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Contact
-          </NavLink>
-        </NavLinks>
-      </NavContainer>
-    </Nav>
-  );
-};
-
-export default Navbar;

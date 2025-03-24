@@ -10,9 +10,10 @@ const imageUrls = [
 
 const downloadImage = (url, filepath) => {
   return new Promise((resolve, reject) => {
-    https.get(url, (response) => {
+    https.get(url, response => {
       if (response.statusCode === 200) {
-        response.pipe(fs.createWriteStream(filepath))
+        response
+          .pipe(fs.createWriteStream(filepath))
           .on('error', reject)
           .once('close', () => resolve(filepath));
       } else {
@@ -25,7 +26,7 @@ const downloadImage = (url, filepath) => {
 
 const main = async () => {
   const dir = path.join(process.cwd(), 'public', 'projects');
-  
+
   // Create directory if it doesn't exist
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
@@ -42,4 +43,4 @@ const main = async () => {
   }
 };
 
-main().catch(console.error); 
+main().catch(console.error);

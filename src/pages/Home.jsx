@@ -1,8 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { FaGithub, FaLinkedin, FaMediumM } from 'react-icons/fa';
-import { PageWrapper, HomeContainer, AboutContainer, Content, TextContent, SocialLinks, SocialIcon, ImageContainer } from '../components/home/styles';
+import {
+  PageWrapper,
+  HomeContainer,
+  AboutContainer,
+  Content,
+  TextContent,
+  SocialLinks,
+  SocialIcon,
+  ImageContainer,
+} from '../components/home/styles';
 import ExperienceSection from '../components/home/sections/ExperienceSection';
 import SkillsSection from '../components/home/sections/SkillsSection';
 import AchievementsSection from '../components/home/sections/AchievementsSection';

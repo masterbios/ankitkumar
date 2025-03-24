@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 
 export const PageWrapper = styled.div`
   display: flex;
@@ -29,10 +28,10 @@ export const HomeContainer = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c3cfe2' fill-opacity='0.2'%3E%3Ccircle cx='20' cy='20' r='2'/%3E%3Cpath d='M20 0 L20 40 M0 20 L40 20' stroke='%23c3cfe2' stroke-width='1' stroke-opacity='0.2'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: 40px 40px;
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c3cfe2' fill-opacity='0.4'%3E%3Ccircle cx='15' cy='15' r='3'/%3E%3Cpath d='M15 0 L15 30 M0 15 L30 15' stroke='%23c3cfe2' stroke-width='2' stroke-opacity='0.4'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 30px 30px;
     z-index: 0;
-    animation: quantumFloat 30s linear infinite;
+    animation: quantumFloat 20s linear infinite;
   }
 
   @keyframes quantumFloat {
@@ -42,7 +41,7 @@ export const HomeContainer = styled.div`
     }
     100% {
       transform: translateY(100%) translateX(50%) rotate(360deg);
-      background-position: 40px 40px;
+      background-position: 30px 30px;
     }
   }
 
@@ -173,7 +172,7 @@ export const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   img {
     width: 100%;
     max-width: 300px;
@@ -184,4 +183,4 @@ export const ImageContainer = styled.div`
       max-width: 500px;
     }
   }
-`; 
+`;

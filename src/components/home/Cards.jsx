@@ -14,9 +14,17 @@ export const ExperienceCard = styled(motion.div)`
   .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 0.5rem;
     position: relative;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @media (max-width: 390px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
   }
 
   .company {
@@ -30,9 +38,14 @@ export const ExperienceCard = styled(motion.div)`
     align-items: center;
     gap: 0.4rem;
     margin-bottom: 0;
+    flex-wrap: wrap;
 
     &::before {
       content: '🏢';
+      font-size: 1rem;
+    }
+
+    @media (max-width: 390px) {
       font-size: 1rem;
     }
   }
@@ -47,10 +60,16 @@ export const ExperienceCard = styled(motion.div)`
     display: flex;
     align-items: center;
     gap: 0.4rem;
+    white-space: nowrap;
 
     &::before {
       content: '📅';
       font-size: 0.9rem;
+    }
+
+    @media (max-width: 390px) {
+      font-size: 0.8rem;
+      padding: 0.2rem 0.6rem;
     }
   }
 
@@ -85,7 +104,7 @@ export const ExperienceCard = styled(motion.div)`
     margin-top: 1.5rem;
     padding-top: 1rem;
     border-top: 1px solid ${props => props.theme.colors.background};
-    
+
     .stack-title {
       background: ${props => props.theme.colors.primary}08;
       color: ${props => props.theme.colors.primary};
@@ -108,7 +127,7 @@ export const ExperienceCard = styled(motion.div)`
       display: flex;
       flex-wrap: wrap;
       gap: 0.8rem;
-      
+
       span {
         background: rgba(0, 123, 255, 0.1);
         color: ${props => props.theme.colors.primary};
@@ -158,7 +177,7 @@ export const SkillCard = styled(motion.div)`
     margin-bottom: 1.5rem;
 
     &::before {
-      content: '💡';
+      content: attr(data-icon);
       font-size: 1rem;
     }
   }
@@ -193,7 +212,7 @@ export const SkillCard = styled(motion.div)`
       &:hover {
         transform: translateY(-2px);
         background: ${props => props.theme.colors.primary}12;
-        
+
         img {
           opacity: 1;
           transform: scale(1.1);
@@ -231,27 +250,47 @@ export const AchievementCard = styled(motion.div)`
   }
 
   h3 {
+    background: ${props => props.theme.colors.secondary}08;
     color: ${props => props.theme.colors.secondary};
-    margin-bottom: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
     font-size: 1.1rem;
     font-weight: 600;
-  }
-
-  p {
-    color: ${props => props.theme.colors.text};
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
-    position: relative;
-    padding-left: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
 
     &::before {
-      content: '→';
-      position: absolute;
-      left: 0;
-      color: ${props => props.theme.colors.primary};
-      font-weight: bold;
-      opacity: 0.8;
+      content: attr(data-icon);
+      font-size: 1rem;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+
+    li {
+      color: ${props => props.theme.colors.text};
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      position: relative;
+      padding-left: 1.5rem;
+
+      &::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: ${props => props.theme.colors.primary};
+        font-weight: bold;
+        opacity: 0.8;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -289,16 +328,39 @@ export const ResponsibilityCard = styled(motion.div)`
   }
 
   h3 {
+    background: ${props => props.theme.colors.secondary}08;
     color: ${props => props.theme.colors.secondary};
-    margin-bottom: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
     font-size: 1.1rem;
     font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+
+    &::before {
+      content: attr(data-icon);
+      font-size: 1rem;
+    }
   }
 
-  p {
-    color: ${props => props.theme.colors.text};
-    font-size: 1rem;
-    line-height: 1.6;
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+
+    li {
+      color: ${props => props.theme.colors.text};
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      position: relative;
+      padding-left: 0.6rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 `;
 
@@ -330,20 +392,32 @@ export const EducationCard = styled(motion.div)`
   }
 
   h3 {
+    background: ${props => props.theme.colors.secondary}08;
     color: ${props => props.theme.colors.secondary};
-    font-size: 1.3rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+
+    &::before {
+      content: attr(data-icon);
+      font-size: 1rem;
+    }
   }
 
   p {
     color: ${props => props.theme.colors.text};
     font-size: 1rem;
     margin-bottom: 0.5rem;
+    padding-left: 0.6rem;
   }
 
   p:last-child {
     color: ${props => props.theme.colors.primary};
     font-weight: 500;
   }
-`; 
+`;

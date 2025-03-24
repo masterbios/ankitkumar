@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { projectsData } from '../data/projects';
 
 const ProjectsContainer = styled.div`
   min-height: 100vh;
@@ -117,35 +118,6 @@ const ProjectLink = styled.a`
   }
 `;
 
-const basePath = import.meta.env.BASE_URL || '/';
-
-const projects = [
-  {
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce platform with user authentication, product management, and payment integration.",
-    image: `${basePath}/projects/project1.jpg`,
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
-    github: "https://github.com/yourusername/project1",
-    live: "https://project1.com"
-  },
-  {
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates and team collaboration features.",
-    image: `${basePath}/projects/project2.jpg`,
-    technologies: ["React", "Firebase", "Material-UI"],
-    github: "https://github.com/yourusername/project2",
-    live: "https://project2.com"
-  },
-  {
-    title: "Portfolio Website",
-    description: "A modern portfolio website built with React and styled-components, featuring smooth animations.",
-    image: `${basePath}/projects/project3.jpg`,
-    technologies: ["React", "Emotion", "Framer Motion"],
-    github: "https://github.com/yourusername/project3",
-    live: "https://project3.com"
-  }
-];
-
 const Projects = () => {
   return (
     <ProjectsContainer>
@@ -155,7 +127,7 @@ const Projects = () => {
           Note: The projects shown below are placeholders. Real projects will be added soon.
         </Disclaimer>
         <ProjectsGrid>
-          {projects.map((project, index) => (
+          {projectsData.map((project, index) => (
             <ProjectCard
               key={index}
               initial={{ opacity: 0, y: 20 }}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
 
 const ContactContainer = styled.div`
   min-height: 100vh;
@@ -132,7 +132,7 @@ const SocialLink = styled(motion.a)`
 const Contact = () => {
   const [formStatus, setFormStatus] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     setFormStatus('not-implemented');
   };
@@ -145,12 +145,11 @@ const Contact = () => {
           <ContactInfo>
             <h2>Let's Connect</h2>
             <p>
-              I'm always open to discussing new projects, creative ideas, or
-              opportunities to be part of your visions.
+              I'm always open to discussing new projects, creative ideas, or opportunities to be
+              part of your visions.
             </p>
             <p>
-              Feel free to reach out through the contact form or connect with me
-              on social media.
+              Feel free to reach out through the contact form or connect with me on social media.
             </p>
             <SocialLinks>
               <SocialLink
@@ -167,13 +166,7 @@ const Contact = () => {
           <ContactForm onSubmit={handleSubmit}>
             <FormGroup>
               <Label htmlFor="name">Name</Label>
-              <Input
-                type="text"
-                id="name"
-                name="name"
-                required
-                placeholder="Your name"
-              />
+              <Input type="text" id="name" name="name" required placeholder="Your name" />
             </FormGroup>
             <FormGroup>
               <Label htmlFor="email">Email</Label>
@@ -197,29 +190,23 @@ const Contact = () => {
             </FormGroup>
             <FormGroup>
               <Label htmlFor="message">Message</Label>
-              <TextArea
-                id="message"
-                name="message"
-                required
-                placeholder="Your message"
-              />
+              <TextArea id="message" name="message" required placeholder="Your message" />
             </FormGroup>
-            <SubmitButton
-              type="submit"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
+            <SubmitButton type="submit" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               Send Message
             </SubmitButton>
             {formStatus === 'not-implemented' && (
-              <p style={{ 
-                color: '#ff9800', 
-                backgroundColor: '#fff3e0', 
-                padding: '1rem', 
-                borderRadius: '4px',
-                marginTop: '1rem'
-              }}>
-                ⚠️ Contact form functionality is not yet implemented. Please use the social media links above to connect.
+              <p
+                style={{
+                  color: '#ff9800',
+                  backgroundColor: '#fff3e0',
+                  padding: '1rem',
+                  borderRadius: '4px',
+                  marginTop: '1rem',
+                }}
+              >
+                ⚠️ Contact form functionality is not yet implemented. Please use the social media
+                links above to connect.
               </p>
             )}
           </ContactForm>

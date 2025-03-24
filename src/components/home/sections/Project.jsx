@@ -76,29 +76,32 @@ const ProjectLink = styled.a`
 
 const projects = [
   {
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.",
-    image: "/projects/project1.jpg",
-    tech: ["React", "Node.js", "MongoDB", "Express", "Redux"],
-    github: "https://github.com/yourusername/ecommerce",
-    demo: "https://demo-ecommerce.com"
+    title: 'E-commerce Platform',
+    description:
+      'A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.',
+    image: '/projects/project1.jpg',
+    tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Redux'],
+    github: 'https://github.com/yourusername/ecommerce',
+    demo: 'https://demo-ecommerce.com',
   },
   {
-    title: "Mobile Task Manager",
-    description: "A cross-platform mobile app for task management built with React Native. Includes features like task creation, reminders, categories, and offline support.",
-    image: "/projects/project2.jpg",
-    tech: ["React Native", "Firebase", "Redux", "AsyncStorage"],
-    github: "https://github.com/yourusername/taskmanager",
-    demo: "https://play.google.com/store/apps/details?id=com.taskmanager"
+    title: 'Mobile Task Manager',
+    description:
+      'A cross-platform mobile app for task management built with React Native. Includes features like task creation, reminders, categories, and offline support.',
+    image: '/projects/project2.jpg',
+    tech: ['React Native', 'Firebase', 'Redux', 'AsyncStorage'],
+    github: 'https://github.com/yourusername/taskmanager',
+    demo: 'https://play.google.com/store/apps/details?id=com.taskmanager',
   },
   {
-    title: "Web Analytics Dashboard",
-    description: "A real-time analytics dashboard for web applications. Built with modern web technologies and includes features like data visualization, user tracking, and custom reports.",
-    image: "/projects/project3.jpg",
-    tech: ["React", "TypeScript", "D3.js", "Node.js", "PostgreSQL"],
-    github: "https://github.com/yourusername/analytics",
-    demo: "https://demo-analytics.com"
-  }
+    title: 'Web Analytics Dashboard',
+    description:
+      'A real-time analytics dashboard for web applications. Built with modern web technologies and includes features like data visualization, user tracking, and custom reports.',
+    image: '/projects/project3.jpg',
+    tech: ['React', 'TypeScript', 'D3.js', 'Node.js', 'PostgreSQL'],
+    github: 'https://github.com/yourusername/analytics',
+    demo: 'https://demo-analytics.com',
+  },
 ];
 
 const Project = () => {
@@ -135,4 +138,4 @@ const Project = () => {
   );
 };
 
-export default Project; 
+export default Project;
