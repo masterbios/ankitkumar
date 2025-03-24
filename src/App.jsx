@@ -3,8 +3,8 @@ import { ThemeProvider } from '@emotion/react';
 import { Global, css } from '@emotion/react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import Projects from './pages/Projects';
 
 const theme = {
   colors: {
