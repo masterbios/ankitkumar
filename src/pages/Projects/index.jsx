@@ -20,9 +20,6 @@ const Projects = () => {
     <ProjectsContainer>
       <Content>
         <Title>My Projects</Title>
-        <Disclaimer>
-          Note: The projects shown below are placeholders. Real projects will be added soon.
-        </Disclaimer>
         <ProjectsGrid>
           {projectsData.map((project, index) => (
             <ProjectCard
@@ -46,7 +43,13 @@ const Projects = () => {
                   <ProjectLink href={project.github} target="_blank" rel="noopener noreferrer">
                     <FaGithub /> GitHub
                   </ProjectLink>
-                  <ProjectLink href={project.live} target="_blank" rel="noopener noreferrer">
+                  <ProjectLink
+                    className="disabled-link"
+                    href={project.live}
+                    onClick="return false;"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FaExternalLinkAlt /> Live Demo
                   </ProjectLink>
                 </ProjectLinks>

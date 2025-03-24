@@ -30,7 +30,7 @@ export const skillsData = [
     skills: [
       { name: 'Android', logo: skillLogos['android'] },
       { name: 'Kotlin', logo: skillLogos['kotlin'] },
-      { name: 'React Native', logo: skillLogos['react-native'] },
+      { name: 'React Native', logo: skillLogos['react'] },
     ],
   },
   {

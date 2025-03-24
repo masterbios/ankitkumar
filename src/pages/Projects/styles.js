@@ -6,6 +6,12 @@ export const ProjectsContainer = styled.div`
   padding: 2rem;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   color: ${props => props.theme.colors.text};
+
+  .disabled-link {
+    pointer-events: none;
+    color: gray;
+    cursor: not-allowed;
+  }
 `;
 
 export const Content = styled.div`
