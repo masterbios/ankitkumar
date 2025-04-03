@@ -4,16 +4,27 @@ export const experienceData = [
     position: 'Software Engineer II',
     duration: 'October 2021 - Present',
     responsibilities: [
-      'Enhancing Indian job seeker experience, including job applications, matching, re-engagement, and localization. Collaborating with internal teams to integrate and improve features based on job seeker feedback and UX research.',
-      'Executed multiple A/B tests on various Indeed platforms to enhance Hindi language user experience, successfully re-engaging job seekers through WhatsApp job alerts, and designed diverse UI features on the Android app for Indian job seeker localization.',
-      "Launched in-app push notifications and added various rich remote push notification features on Indeed's Android app for Indian jobseekers.",
+      'Drove continuous improvement of the Indian job seeker experience by leading cross-functional collaborations to implement user feedback and UX research insights, resulting in a 3% uplift in apply completion rates.',
+      'Optimized various surfaces on Indeed for performance and engagement, increasedd user interaction by 10% through A/B testing of Hindi UIenhancements, migration of, migration of WhatsApp and Android features targeted to customers.omers.',
+      'Engineered back-end and front-end solutions to improve push notification delivery, increasing open rates by 14% with targeted in-app and rich push notifications.'
     ],
     techStack: [
-      'ReactJS (TypeScript + JavaScript)',
-      'JAVA (Spring Boot)',
-      'Android (Kotlin)',
+      'ReactJS',
+      'Spring Boot',
+      'Android',
       'Jetpack Compose',
       'MySQL',
+      'Amazon AWS',
+      'Typescript',
+      'Javscript',
+      'Java',
+      'Python',
+      'Terraform',
+      'Datadog',
+      'Playwright',
+      'Jest',
+      'Docker',
+      'Firebase crashlytics'
     ],
   },
   {
